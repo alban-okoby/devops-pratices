@@ -29,5 +29,23 @@ Start-Process 'Docker Desktop Installer.exe' -Wait install
 ```
 start /w "" "Docker Desktop Installer.exe" install
 ```
+Une fois intallé, vous pouvez passer au cas pratique <br>
+
+### 3- Cas pratique
+Pour ce cas pratique vous aurez besoin de : 
+- [x] GIT
+- [x] DOCKER
+
+#### 3-1 Cloner le projet
+Ici nous réccupérons le projet de démarrage de docker de cette façon : 
+```
+    git clone https://github.com/docker/getting-started.git
+```
+#### 3-2 Créez l'image du conteneur de votre application
+A la racine de votre projet créez un fichier nommé ``` Dockerfile ```
+nous pouvons le faire manuellement ou en ligne de commande. Par exemple :
+- Sous Mac ou Linux
+  ``` touch Dockerfile ``` ou ``` echo > Dockerfile ```
+- Sous Windows ``` echo Dockerfile ``` ou ``` type nul > Dockerfile ```
 
 #### Happy works <\🎉>
