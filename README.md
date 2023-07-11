@@ -41,13 +41,13 @@ Ici nous réccupérons le projet de démarrage de docker de cette façon :
 ```
     git clone https://github.com/docker/getting-started.git
 ```
-#### Etape 2 Créez l'image du conteneur de votre application
+#### Etape 2 Configurez les instructions de création de l'image 
 A la racine de votre projet créez un fichier nommé ``` Dockerfile ```
 nous pouvons le faire manuellement ou en ligne de commande. Par exemple :
 - Sous Mac ou Linux
   ``` touch Dockerfile ``` ou ``` echo > Dockerfile ```
-- Sous Windows ``` echo Dockerfile ``` ou ``` type nul > Dockerfile ```
- <br> A l'intérieur du Dockerfile créé ajoutez les lignes suivantes :
+- Sous Windows ``` echo > Dockerfile ``` ou ``` type nul > Dockerfile ```
+ <br> A l'intérieur du Dockerfile créé ajoutez les lignes de configurations suivantes :
 
 
 ```
@@ -59,4 +59,8 @@ RUN yarn install --production
 CMD ["node", "src/index.js"]
 EXPOSE 3000
 ```
-#### Happy works <\🎉>
+#### Etape 3 Créez l'image du conteneur de votre application
+```
+docker build -t getting-started .
+```
+#### Have Happy Works <\🎉>    <br> Alban 🚀
