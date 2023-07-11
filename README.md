@@ -36,16 +36,27 @@ Pour ce cas pratique vous aurez besoin de :
 - [x] GIT
 - [x] DOCKER
 
-#### 3-1 Cloner le projet
+#### Etape 1 Cloner le projet
 Ici nous réccupérons le projet de démarrage de docker de cette façon : 
 ```
     git clone https://github.com/docker/getting-started.git
 ```
-#### 3-2 Créez l'image du conteneur de votre application
+#### Etape 2 Créez l'image du conteneur de votre application
 A la racine de votre projet créez un fichier nommé ``` Dockerfile ```
 nous pouvons le faire manuellement ou en ligne de commande. Par exemple :
 - Sous Mac ou Linux
   ``` touch Dockerfile ``` ou ``` echo > Dockerfile ```
 - Sous Windows ``` echo Dockerfile ``` ou ``` type nul > Dockerfile ```
+ <br> A l'intérieur du Dockerfile créé ajoutez les lignes suivantes :
 
+
+```
+# syntax=docker/dockerfile:1
+FROM node:18-alpine
+WORKDIR /app
+COPY . .
+RUN yarn install --production
+CMD ["node", "src/index.js"]
+EXPOSE 3000
+```
 #### Happy works <\🎉>
