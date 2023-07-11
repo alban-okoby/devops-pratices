@@ -63,4 +63,9 @@ EXPOSE 3000
 ```
 docker build -t getting-started .
 ```
+#### Etape 4 Démarrer votre conteneur d'applicationsn
+```
+docker run -dp 127.0.0.1:3000:3000 getting-started
+```
+Sur votre navigateur aller à l'adresse ``` 127.0.0.1:3000 ``` votre application est bien lancée 🚀
 #### Have Happy Works <\🎉>    <br> Alban 🚀
