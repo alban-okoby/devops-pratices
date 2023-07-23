@@ -25,7 +25,7 @@ Une fois le pack téléchargé, vous pouver lancer l'installation de plusieurs f
 ```
 Start-Process 'Docker Desktop Installer.exe' -Wait install
 ```
-##### Soit en utilisant l'invite de commande natif CMD de windows
+##### Soit en utilisant l'invite de commande native CMD de windows
 ```
 start /w "" "Docker Desktop Installer.exe" install
 ```
@@ -36,14 +36,14 @@ Pour ce cas pratique vous aurez besoin de :
 - [x] GIT
 - [x] DOCKER
 
-#### Etape 1 Cloner le projet
+#### Etape 1 : Cloner le projet
 Ici nous réccupérons le projet de démarrage de docker de cette façon : 
 ```
     git clone https://github.com/docker/getting-started.git
 ```
-#### Etape 2 Configurez les instructions de création de l'image 
+#### Etape 2 : Configurer la de création de l'image 
 A la racine de votre projet créez un fichier nommé ``` Dockerfile ```
-nous pouvons le faire manuellement ou en ligne de commande. Par exemple :
+vous pouvons le faire manuellement ou en ligne de commande. Par exemple :
 - Sous Mac ou Linux
   ``` touch Dockerfile ``` ou ``` echo > Dockerfile ```
 - Sous Windows ``` echo > Dockerfile ``` ou ``` type nul > Dockerfile ```
@@ -59,11 +59,15 @@ RUN yarn install --production
 CMD ["node", "src/index.js"]
 EXPOSE 3000
 ```
-#### Etape 3 Créez l'image du conteneur de votre application
+NB : Les instructions de création d'une image Docker diffèrent selon le type d'application.
+#### Etape 3 Créer l'image du conteneur de votre application
 ```
 docker build -t getting-started .
 ```
-#### Etape 4 Démarrer votre conteneur d'applicationsn
+"getting-started" represente ici le nom de l'image Docker, vous pouvez l'appeler comme vous le sentez.
+#### Etape 4 Démarrer votre conteneur d'applications
+docker run -dp HOST:CONTAINER NOM_IMAGE
+dans notre cas :
 ```
 docker run -dp 127.0.0.1:3000:3000 getting-started
 ```
