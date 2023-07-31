@@ -21,7 +21,7 @@ NB : Pour un serveur Linux nous avons 2 commandes principales selon la version :
 cat /etc/oracle-release
 ```
 Un aperçu en image 
-<img align="center" src="https://github.com/alban-okoby/images_projects/blob/main/template_portfolio/home.JPG" />
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/oracle_version.PNG" />
 Notre utilisons un serveur Oracle Linux 8 ce qui veut dire que les commande vont commcer par ``` dnf ```
 
 ### I- Installation des outils
@@ -29,21 +29,21 @@ Notre utilisons un serveur Oracle Linux 8 ce qui veut dire que les commande vont
 ```
   sudo dnf install java-11-openjdk-devel
 ```
-Un aperçu en image 
-<img align="center" src="https://github.com/alban-okoby/images_projects/blob/main/template_portfolio/home.JPG" />
+ 
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/jdk11_install.png" />
 #### 2- Vérifiez si le JDK est parfaitement installé
 ```
   java -version
 ```
-Un aperçu en image 
-<img align="center" src="https://github.com/alban-okoby/images_projects/blob/main/template_portfolio/home.JPG" />
+Un aperçu 👇👇
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/jdk_version.png" />
 
 ##### 3- Installation de PHP 7 (version 7.2 dans notre cas)
 ```
 sudo dnf install php
 ```
 Taper y pour accepter.
-<img align="center" src="https://github.com/alban-okoby/images_projects/blob/main/template_portfolio/home.JPG" />git
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/php_version.png" />git
 #### 4- Installation et configuration du serveur Nginx
 Étape 4-1: Installer Nginx
 ```
@@ -69,8 +69,6 @@ Si tout s'est bien passé, vous devriez voir un message indiquant que le service
 ```
 sudo firewall-cmd --add-service=http --permanent
 ```
-Exemple :
-
 Pour autoriser le trafic HTTPS, utilisez la commande suivante :
 ```
 sudo firewall-cmd --add-service=https --permanent
