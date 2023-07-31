@@ -31,6 +31,7 @@ Notre utilisons un serveur Oracle Linux 8 ce qui veut dire que les commande vont
 ```
  
 <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/jdk11_install.png" />
+
 #### 2- Vérifiez si le JDK est parfaitement installé
 ```
   java -version
@@ -38,7 +39,7 @@ Notre utilisons un serveur Oracle Linux 8 ce qui veut dire que les commande vont
 Un aperçu 👇👇
 <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/jdk_version.png" />
 
-##### 3- Installation de PHP 7 (version 7.2 dans notre cas)
+#### 3- Installation de PHP 7 (version 7.2 dans notre cas)
 ```
 sudo dnf install php
 ```
@@ -63,6 +64,7 @@ sudo systemctl enable nginx
 ```
   sudo systemctl status nginx
 ```
+
 Étape 4-5: Configurer le pare-feu (firewalld) pour Nginx (facultatif)
 Si vous avez activé le pare-feu firewalld sur votre système, vous devrez peut-être configurer les règles pour permettre le trafic HTTP (port 80) et le trafic HTTPS (port 443) pour Nginx. Pour autoriser le trafic HTTP, utilisez la commande suivante :
 Si tout s'est bien passé, vous devriez voir un message indiquant que le service est actif et en cours d'exécution.
@@ -77,7 +79,15 @@ Après avoir ajouté les règles, rechargez firewalld pour qu'elles prennent eff
 ```
 sudo firewall-cmd --reload
 ```
+Super, votre environement est prêt à recevoir vos applications (java et Angular)
 ### II- Déploiement des applications
+Cette partie considère que vous avez déjà vos applications prêts pour la production (build déjà ok); <br>
+
+Vous devez envoyer vos application sur votre serveur, pour ce faire vous pouvez utiliser des outils tels : 
+[x] [MobaXterm](https://mobaxterm.mobatek.net/download.html) 
+[x] [FileZilla](https://filezilla-project.org/download.php?platform=win64)
+
+Dans cet exemple nous utiliserons ``` MobaXterm ```
 
 Sur votre navigateur aller à l'adresse 👉:  ``` adresse_de_votre_serveur:port ```
 exemple : 192.168.25.25:8081 votre application est bien lancée 🚀
