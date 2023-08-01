@@ -80,8 +80,9 @@ Alors
 ```
     sudo systemctl status firewalld
  ``` 
-- [] S'il n'existe aucun pare-feu 🚦❌ 👇
+- [x] S'il n'existe aucun pare-feu 🚦❌ 👇
  <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_not_running.png" />
+ 
 - [x] Si le pare-feu existe 🚦 ✅ 👇
  <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_status.png" />
 
@@ -97,7 +98,7 @@ sudo firewall-cmd --add-service=http --permanent
 Si tout s'est bien passé, vous devriez voir un message indiquant que le service est actif et en cours d'exécution.
 Sinon si aucun pare-feu ne bloque l'accès, vous devrez voir un message du genre 👇👇 :
 
-<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_not_running.png" />
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_status.png" />
 
 Vous pouvez avoir besoin d'autoriser le trafic HTTPS également; <b>
 - Pour autoriser le trafic HTTPS, utilisez la commande suivante :
