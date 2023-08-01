@@ -1,3 +1,22 @@
+#
+#
+#
+#
+#
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
 # PROCESS DE DEPLOIEMENT 🚀 D'UNE APPLICATION
 Pour déployer votre application, vous avez plusieurs techniques et outils possible selon votre type d'application et votre catégorie de serveur (serveur mutualisé, serveur dédié ...) et vos besoins. <br> 
 NB : 
