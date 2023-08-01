@@ -166,6 +166,7 @@ unzip uiJuillet2023.zip
 cd /var/www/html/uiJuillet2023
 ```
 - Lancez l'application Angular 🚀
+```
 php -S 0.0.0.0:PORT_LIBRE_DE_VOTRE_CHOIX
 ```
 Dans notre cas lançons l'appli sur le port 87;
