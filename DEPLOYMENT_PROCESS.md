@@ -80,9 +80,8 @@ Alors
 ```
     sudo systemctl status firewalld
  ``` 
-- [x] S'il n'existe aucun pare-feu 🚦❌ 👇
+- [] S'il n'existe aucun pare-feu 🚦❌ 👇
  <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_not_running.png" />
- 
 - [x] Si le pare-feu existe 🚦 ✅ 👇
  <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_status.png" />
 
@@ -98,7 +97,7 @@ sudo firewall-cmd --add-service=http --permanent
 Si tout s'est bien passé, vous devriez voir un message indiquant que le service est actif et en cours d'exécution.
 Sinon si aucun pare-feu ne bloque l'accès, vous devrez voir un message du genre 👇👇 :
 
-<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_status.png" />
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_not_running.png" />
 
 Vous pouvez avoir besoin d'autoriser le trafic HTTPS également; <b>
 - Pour autoriser le trafic HTTPS, utilisez la commande suivante :
@@ -111,7 +110,7 @@ sudo firewall-cmd --reload
 ```
 Bien ! A ce stade vous devez pouvoir voir sur un navigateur web la page d'acceuil de votre serveur nginx à l'adresse de votre serveur exemple ```192.168.25.25```.
 👇👇
-<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/nginx_acceuil.png" />
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/ngin_accueil.png" />
 
 Super, votre environement est prêt à recevoir vos applications (java et Angular)
 ### II- Déploiement des applications
@@ -123,7 +122,8 @@ Vous devez envoyer vos applications(java et angular) sur votre serveur, pour ce 
 
 Dans cet exemple nous utiliserons ``` MobaXterm ```
 #### 1- Uploder le(s) fichier(s) de deploiement back (java)
-Une fois connecté avec ``` MobaXterm ```, vous pouvez voir 
+Une fois connecté avec ``` MobaXterm ```, vous pouvez voir :
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/graphique_deploy1.PNG" />
 
 Sur votre navigateur aller à l'adresse 👉:  ``` adresse_de_votre_serveur:port ```
 exemple : 192.168.25.25:8081 votre application est bien lancée 🚀
