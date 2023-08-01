@@ -20,8 +20,8 @@ NB : Pour un serveur Linux nous avons 2 commandes principales selon la version :
 ``` 
 cat /etc/oracle-release
 ```
-Un aperçu en image 
-<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/oracle_version.PNG" />
+Un aperçu en image <br>
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/oracle_version.PNG" /> <br>
 Notre utilisons un serveur Oracle Linux 8 ce qui veut dire que les commande vont commcer par ``` dnf ```
 
 ### I- Installation des outils
