@@ -61,7 +61,7 @@ Une fois intallé, démarrez le serveur <br>
 ```
 sudo systemctl start nginx
 ```
-Étape 4-3: Activer le démarrage automatique de Nginx (pas obligatire mais recommandé ✅)
+Étape 4-3: Activer le démarrage automatique de Nginx (pas obligatire mais recommandé ✅) <br>
 Si vous souhaitez que Nginx démarre automatiquement à chaque démarrage du système(après coupure d'électricité par exemple), exécutez la commande suivante pour activer le service au démarrage :
 ```
 sudo systemctl enable nginx
@@ -73,20 +73,45 @@ sudo systemctl enable nginx
  Vous devez voir 👇👇
  <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/nginx_status.png" />
 
-Étape 4-5: Configurer le pare-feu (firewalld) pour Nginx (facultatif)
+Bien ! A ce stade vous devez pouvoir voir sur un navigateur web la page d'acceuil de votre serveur nginx à l'adresse de votre serveur exemple ```192.168.25.25```. <br> 🚧 Cependant si votre serveur contient un pare-feu 🚦 , il peut vous empêcher d'avoir accès ❌ 
+
+Alors
+ - Vérifiez d'abord l'existence d'un pare-feu. 
+```
+    sudo systemctl status firewalld
+ ``` 
+- [] S'il n'existe aucun pare-feu 🚦❌ 👇
+ <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_not_running.png" />
+- [x] Si le pare-feu existe 🚦 ✅ 👇
+ <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_status.png" />
+
+- NB : Si vous n'avez pas de pare-feu en exécution vous pouvez passer directement à l'étape II - DEPLOIEMENT DES PPLICATIONS
+
+Au cas où il existe un parfe-feu sur votre serveur : 
+Étape 4-5: Configurer le pare-feu (firewalld) pour Nginx (En cas de besoin)
 Si vous avez activé le pare-feu firewalld sur votre système, vous devrez peut-être configurer les règles pour permettre le trafic HTTP (port 80) et le trafic HTTPS (port 443) pour Nginx. Pour autoriser le trafic HTTP, utilisez la commande suivante :
-Si tout s'est bien passé, vous devriez voir un message indiquant que le service est actif et en cours d'exécution.
+
 ```
 sudo firewall-cmd --add-service=http --permanent
 ```
-Pour autoriser le trafic HTTPS, utilisez la commande suivante :
+Si tout s'est bien passé, vous devriez voir un message indiquant que le service est actif et en cours d'exécution.
+Sinon si aucun pare-feu ne bloque l'accès, vous devrez voir un message du genre 👇👇 :
+
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_not_running.png" />
+
+Vous pouvez avoir besoin d'autoriser le trafic HTTPS également; <b>
+- Pour autoriser le trafic HTTPS, utilisez la commande suivante :
 ```
 sudo firewall-cmd --add-service=https --permanent
 ```
-Après avoir ajouté les règles, rechargez firewalld pour qu'elles prennent effet :
+Après avoir ajouté les règles, rechargez votre pare-feu (firewalld) pour qu'elles prennent effet :
 ```
 sudo firewall-cmd --reload
 ```
+Bien ! A ce stade vous devez pouvoir voir sur un navigateur web la page d'acceuil de votre serveur nginx à l'adresse de votre serveur exemple ```192.168.25.25```.
+👇👇
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/nginx_acceuil.png" />
+
 Super, votre environement est prêt à recevoir vos applications (java et Angular)
 ### II- Déploiement des applications
 Cette partie considère que vous avez déjà vos applications prêts pour la production (build déjà ok); <br>
