@@ -79,10 +79,11 @@ Alors
  - Vérifiez d'abord l'existence d'un pare-feu. 
 ```
     sudo systemctl status firewalld
- ``` 
-- [] S'il n'existe aucun pare-feu 🚦❌ 👇
+ ```
+- [x] S'il n'existe aucun pare-feu 🚦❌ 👇
  <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_not_running.png" />
-- [x] Si le pare-feu existe 🚦 ✅ 👇
+ 
+ - [x] Si le pare-feu existe 🚦 ✅ 👇
  <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_status.png" />
 
 - NB : Si vous n'avez pas de pare-feu en exécution vous pouvez passer directement à l'étape II - DEPLOIEMENT DES PPLICATIONS
