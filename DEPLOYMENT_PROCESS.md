@@ -122,11 +122,51 @@ Vous devez envoyer vos applications(java et angular) sur votre serveur, pour ce 
 
 Dans cet exemple nous utiliserons ``` MobaXterm ```
 #### 1- Uploder le(s) fichier(s) de deploiement back (java)
-Une fois connecté avec ``` MobaXterm ```, vous pouvez voir :
+Une fois connecté avec ``` MobaXterm ```, vous pouvez cliquez sur cette flêche comme le montre l'image :
 <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/graphique_deploy1.PNG" />
 
-Sur votre navigateur aller à l'adresse 👉:  ``` adresse_de_votre_serveur:port ```
-exemple : 192.168.25.25:8081 votre application est bien lancée 🚀
+Choisissez le(s) fichier(s) à uploder. 
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/choose_jar.png" />
+
+Après chargement.. <br>
+Vous devez avoir le(s) fichier uplodé à la racine de votre serveur comme sur l'image 👇
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/uploaded_jar.png" />
+
+Vous pouvez le déplacer dans un dossier de votre choix, ensuite exécutez la commande suivante pour démarrer l'application java : <br>
+```
+java -jar <nom_de_votre_jar_ou_war>
+```
+exemple, dans notre cas le fichier est un OfarmJuillet2023.jar donc on aura : <br>
+```
+java -jar OfarmJuillet2023.jar
+```
+Ce qui donne le résultat suivant : <br>
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/spring_running.png" />
+Super ! votre application java est lancée, maintenant, faite pareil pour votre application angular <br>
+
+Dans notre nous avons importé le fichier angular(le build compressé) sous le nom de web-app.zip <br> Nous devons le déplacer dans un dossier de notre choix sur le serveur, mais il est recommandé de mettre les interfaces dans le dossier ``` var/www/html ```. <br>
+- Deplacez donc votre fichier dans le repertoire en question : <br>
+```
+sudo mv <NOM_DU_BUILD_COMPRESSE_DE_VOTRE_APPLI> /var/www/html
+```
+- Ensuite, décompressz le fichier (unzip pour .zip et unrar pour .rar) <br>
+```
+unzip <NOM_DU_BUILD_COMPRESSE_DE_VOTRE_APPLI>
+```
+Ce qui donne dans notre cas : 
+```
+unzip web-app.zip
+```
+- Entrez dans le dossier décompressé pour lancer l'application : <br>
+```
+php -S 0.0.0.0:PORT_LIBRE_DE_VOTRE_CHOIX
+```
+Dans notre cas lançons sur le port 87;
+```
+php -S 0.0.0.0:87
+```
+Sur votre navigateur aller à l'adresse 👉:  ``` adresse_de_votre_serveur:port_choisi ```
+exemple : 192.168.25.25:87 votre application est bien lancée 🚀
 
 Bravo 👏🏼👏🏼! vous venez de déployer votre application sur un serveur dédié. 
 
