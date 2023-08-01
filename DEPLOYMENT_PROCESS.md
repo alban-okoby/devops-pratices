@@ -144,10 +144,14 @@ Ce qui donne le résultat suivant : <br>
 <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/spring_running.png" />
 Super ! votre application java est lancée, maintenant, faite pareil pour votre application angular <br>
 
-Dans notre nous avons importé le fichier angular(le build compressé) sous le nom de web-app.zip <br> Nous devons le déplacer dans un dossier de notre choix sur le serveur, mais il est recommandé de mettre les interfaces dans le dossier ``` var/www/html ```. <br>
+Dans notre nous avons importé le fichier angular(le build compressé) sous le nom de uiJuillet2023.zip <br> Nous devons le déplacer dans un dossier de notre choix sur le serveur, mais il est recommandé de mettre les interfaces dans le dossier ``` var/www/html ```. <br>
 - Deplacez donc votre fichier dans le repertoire en question : <br>
 ```
 sudo mv <NOM_DU_BUILD_COMPRESSE_DE_VOTRE_APPLI> /var/www/html
+```
+Dans notre cas(nous considérons que votre fichier est à la racine du serveur : 
+```
+mv /root/uiJuillet2023.zip /var/www/html
 ```
 - Ensuite, décompressz le fichier (unzip pour .zip et unrar pour .rar) <br>
 ```
@@ -155,13 +159,16 @@ unzip <NOM_DU_BUILD_COMPRESSE_DE_VOTRE_APPLI>
 ```
 Ce qui donne dans notre cas : 
 ```
-unzip web-app.zip
+unzip uiJuillet2023.zip
 ```
 - Entrez dans le dossier décompressé pour lancer l'application : <br>
 ```
+cd /var/www/html/uiJuillet2023
+```
+- Lancez l'application Angular 🚀
 php -S 0.0.0.0:PORT_LIBRE_DE_VOTRE_CHOIX
 ```
-Dans notre cas lançons sur le port 87;
+Dans notre cas lançons l'appli sur le port 87;
 ```
 php -S 0.0.0.0:87
 ```
