@@ -43,9 +43,15 @@ Un aperçu 👇👇
 ```
 sudo dnf install php
 ```
-Taper y pour accepter.
-<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/php_version.png" />git
+- Taper y pour accepter. A la fin de l'installation 👇 
+- Vérifiez si php est bien installé :
+```
+php -v
+```
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/php_version.png" />
+
 #### 4- Installation et configuration du serveur Nginx
+
 Étape 4-1: Installer Nginx
 ```
 sudo dnf install nginx
@@ -55,8 +61,8 @@ Une fois intallé, démarrez le serveur <br>
 ```
 sudo systemctl start nginx
 ```
-Étape 4-3: Activer le démarrage automatique de Nginx
-Si vous souhaitez que Nginx démarre automatiquement à chaque démarrage du système, exécutez la commande suivante pour activer le service au démarrage :
+Étape 4-3: Activer le démarrage automatique de Nginx (pas obligatire mais recommandé ✅)
+Si vous souhaitez que Nginx démarre automatiquement à chaque démarrage du système(après coupure d'électricité par exemple), exécutez la commande suivante pour activer le service au démarrage :
 ```
 sudo systemctl enable nginx
 ```
@@ -64,6 +70,8 @@ sudo systemctl enable nginx
 ```
   sudo systemctl status nginx
 ```
+ Vous devez voir 👇👇
+ <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/nginx_status.png" />
 
 Étape 4-5: Configurer le pare-feu (firewalld) pour Nginx (facultatif)
 Si vous avez activé le pare-feu firewalld sur votre système, vous devrez peut-être configurer les règles pour permettre le trafic HTTP (port 80) et le trafic HTTPS (port 443) pour Nginx. Pour autoriser le trafic HTTP, utilisez la commande suivante :
@@ -83,11 +91,13 @@ Super, votre environement est prêt à recevoir vos applications (java et Angula
 ### II- Déploiement des applications
 Cette partie considère que vous avez déjà vos applications prêts pour la production (build déjà ok); <br>
 
-Vous devez envoyer vos application sur votre serveur, pour ce faire vous pouvez utiliser des outils tels : 
-[x] [MobaXterm](https://mobaxterm.mobatek.net/download.html) 
-[x] [FileZilla](https://filezilla-project.org/download.php?platform=win64)
+Vous devez envoyer vos applications(java et angular) sur votre serveur, pour ce faire vous pouvez utiliser des outils tels : <br>
+- [x] [MobaXterm](https://mobaxterm.mobatek.net/download.html) 
+- [x] [FileZilla](https://filezilla-project.org/download.php?platform=win64)
 
 Dans cet exemple nous utiliserons ``` MobaXterm ```
+#### 1- Uploder le(s) fichier(s) de deploiement back (java)
+Une fois connecté avec ``` MobaXterm ```, vous pouvez voir 
 
 Sur votre navigateur aller à l'adresse 👉:  ``` adresse_de_votre_serveur:port ```
 exemple : 192.168.25.25:8081 votre application est bien lancée 🚀
