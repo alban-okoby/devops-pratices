@@ -72,4 +72,4 @@ dans notre cas :
 docker run -dp 127.0.0.1:3000:3000 getting-started
 ```
 Sur votre navigateur aller à l'adresse ``` 127.0.0.1:3000 ``` votre application est bien lancée 🚀
-#### Have Happy Works <\🎉>    <br> Alban 🚀
+#### Have Happy Works <\🎉>    <br> Alban 🐱‍👤
