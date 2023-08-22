@@ -154,7 +154,12 @@ Dans notre cas(nous considérons que votre fichier est à la racine du serveur :
 ```
 mv /root/uiJuillet2023.zip /var/www/html
 ```
-- Ensuite, décompressz le fichier (unzip pour .zip et unrar pour .rar) <br>
+Ensuite entrez dans le repertoire où vous avez déplacé le compressé de l'application
+```
+cd /var/www/html
+```
+
+- Puis, décompressz le fichier (unzip pour .zip et unrar pour .rar) <br>
 ```
 unzip <NOM_DU_BUILD_COMPRESSE_DE_VOTRE_APPLI>
 ```
@@ -179,4 +184,4 @@ exemple : 192.168.25.25:87 votre application est bien lancée 🚀
 
 Bravo 👏🏼👏🏼! vous venez de déployer votre application sur un serveur dédié. 
 
-#### Have Happy Works <\🎉>    <br> Alban 👋
+#### Have Happy Works <\🎉>    <br> Alban 🐱‍👤
