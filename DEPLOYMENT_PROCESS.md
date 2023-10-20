@@ -1,7 +1,7 @@
 # PROCESS DE DEPLOIEMENT 🚀 D'UNE APPLICATION
 Pour déployer votre application, vous avez plusieurs techniques et outils possible selon votre type d'application et votre catégorie de serveur (serveur mutualisé, serveur dédié ...) et vos besoins. <br> 
 NB : 
- - Si vous utilisez un serveur mutualisé(achat d'une partie de espace d'hébergement avec un fornisseur de service), généralement aucune config n'est néccessaire car votre founisseur se charge d'installer et de partager les parts de chaque utilisateur;
+ - Si vous utilisez un serveur mutualisé(achat d'une partie de l'espace d'hébergement avec un fornisseur de service), généralement aucune config n'est néccessaire car votre founisseur se charge d'installer et de partager les parts de chaque utilisateur;
  - Si vous utilisez un serveur dédié, le serveur vous appartient, vous devez donc faire toutes les config dont vous avez besoin 
     
 ## Cas pratique de déploiement d'une application Java/Spring 🌱 et Angular 🚀 sur un serveur dedié (Oracle Linux)
