@@ -80,23 +80,30 @@ Alors
 ```
     sudo systemctl status firewalld
  ```
+- [x] Si le pare-feu existe 🚦 ✅ 👇
+ <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_status.png" />
+ 
 - [x] S'il n'existe aucun pare-feu 🚦❌ 👇
  <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_not_running.png" />
  
- - [x] Si le pare-feu existe 🚦 ✅ 👇
- <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_status.png" />
+ 
 
-- NB : Si vous n'avez pas de pare-feu en exécution vous pouvez passer directement à l'étape II - DEPLOIEMENT DES PPLICATIONS
+- NB : Si vous n'avez pas de pare-feu en exécution vous pouvez passer directement à l'étape :
+  ## II - DEPLOIEMENT DES APPLICATIONS
 
 Au cas où il existe un parfe-feu sur votre serveur : 
 Étape 4-5: Configurer le pare-feu (firewalld) pour Nginx (En cas de besoin)
-Si vous avez activé le pare-feu firewalld sur votre système, vous devrez peut-être configurer les règles pour permettre le trafic HTTP (port 80) et le trafic HTTPS (port 443) pour Nginx. Pour autoriser le trafic HTTP, utilisez la commande suivante :
+Si vous avez activé le pare-feu firewalld sur votre serveur, vous devrez peut-être configurer les règles pour permettre le trafic HTTP (port 80) et le trafic HTTPS (port 443) pour Nginx. Pour autoriser le trafic HTTP, utilisez la commande suivante :
 
 ```
 sudo firewall-cmd --add-service=http --permanent
 ```
+Pour activer les flux d'entrés d'un port spécifique 
+```
+sudo firewall-cmd --add-service=http --permanent --add-port=<PORT_NUMBER>/tcp
+```
 Si tout s'est bien passé, vous devriez voir un message indiquant que le service est actif et en cours d'exécution.
-Sinon si aucun pare-feu ne bloque l'accès, vous devrez voir un message du genre 👇👇 :
+Sinon lorsqu'aucun pare-feu ne bloque l'accès, vous devrez voir un message du genre 👇👇 :
 
 <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_not_running.png" />
 
