@@ -24,6 +24,16 @@ Un aperçu en image <br>
 <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/oracle_version.PNG" /> <br>
 Nous utilisons un serveur Oracle Linux 8 ce qui veut dire que les commandes vont commcer par ``` dnf ```
 
+Mettez à jour les fichiers du serveur
+```
+sudo yum update
+```
+ou 
+```
+sudo dnf update
+```
+Vous acceptez les questions (yes)
+
 ### I- Installation des outils
 #### 1- Installez un JDK (Java 11 dans notre cas)
 ```
