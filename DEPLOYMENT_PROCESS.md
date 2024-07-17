@@ -66,9 +66,10 @@ php -v
 ```
 sudo dnf install nginx
 ```
-il est pssible de tomber sur cette erreur :
+Il est possible de tomber sur cette erreur :
+<img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/nginx_not_found.PNG" /> <br>
 
-alors selon la version de votre serveur installez un rep de `nginx`
+alors selon la version de votre serveur installez un repo de `nginx`
 ```
 sudo rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 ```
