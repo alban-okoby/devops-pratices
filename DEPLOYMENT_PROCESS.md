@@ -66,6 +66,14 @@ php -v
 ```
 sudo dnf install nginx
 ```
+il est pssible de tomber sur cette erreur :
+
+alors selon la version de votre serveur installez un rep de `nginx`
+```
+sudo rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+```
+Après cela, refaite la commande d'installation de `nginx`
+
 Étape 4-2: Démarrer le service Nginx
 Une fois intallé, démarrez le serveur <br>
 ```
