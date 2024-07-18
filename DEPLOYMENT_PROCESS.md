@@ -117,12 +117,12 @@ Si vous avez activé le pare-feu firewalld sur votre serveur, vous devrez peut-�
 ```
 sudo firewall-cmd --add-service=http --permanent
 ```
-Pour activer les flux d'entrés d'un port spécifique 
+Pour activer les flux d'entrés d'un port spécifique `<PORT_NUMBER>`
 ```
-sudo firewall-cmd --add-service=http --permanent --add-port=<PORT_NUMBER>/tcp
+sudo firewall-cmd --permanent --add-port=<PORT_NUMBER>/tcp
 ```
 Si tout s'est bien passé, vous devriez voir un message indiquant que le service est actif et en cours d'exécution.
-Sinon lorsqu'aucun pare-feu ne bloque l'accès, vous devrez voir un message du genre 👇👇 :
+Sinon lorsqu'aucun pare-feu ne bloque l'accès, vous allez voir un message du genre 👇👇 :
 
 <img align="center" src="https://github.com/alban-okoby/devops-pratices/blob/main/images/firewall_not_running.png" />
 
