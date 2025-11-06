@@ -13,7 +13,7 @@ Dans notre cas particulier nous aurons besoin de :
 -  Une version de PHP;
 -  Installer et configurer un serveur Nginx (Ce que nous allons utiliser ) | ou apache;
 
-NB : Pour un serveur Linux nous avons 2 commandes principales selon la version :
+NB : Pour un serveur Oracle Linux nous avons 2 commandes principales selon la version :
 - yum (pour oracle 7 )
 - dnf (pour Oracle 8+ ) <br>
 #### Vérifiez la version de votre serveur
